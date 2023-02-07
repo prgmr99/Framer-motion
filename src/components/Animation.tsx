@@ -23,15 +23,16 @@ const Smile = styled.span`
   display: flex;
   font-size: 190px;
 `;
+
 function Animation() {
   return (
     <Wrapper>
       <Box
         transition={{ type: "spring", damping: 100 }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 2, rotateZ: 360 }}
+        initial={{ scale: 0, borderRadius: "100px" }}
+        animate={{ scale: 2, borderRadius: "100px", rotateZ: 360 }}
       >
-        <Smile>😂</Smile>
+        <Smile>😞</Smile>
       </Box>
     </Wrapper>
   );
