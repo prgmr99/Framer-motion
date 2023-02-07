@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -26,6 +26,7 @@ const Circle = styled(motion.div)`
   border-radius: 35px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
+
 const myVars = {
   start: { scale: 0 },
   end: { scale: 1, rotateZ: 360 },
@@ -57,7 +58,7 @@ const circleVarients = {
   },
 };
 
-function App() {
+function Variants() {
   return (
     <Wrapper>
       <Box variants={boxVarients} initial="start" animate="end">
@@ -70,4 +71,4 @@ function App() {
   );
 }
 
-export default App;
+export default Variants;
