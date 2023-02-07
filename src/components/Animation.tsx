@@ -16,21 +16,25 @@ const Box = styled(motion.div)`
   border-radius: 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
-const myVars = {
-  start: { scale: 0 },
-  end: { scale: 1, rotateZ: 360 },
-  transition: {
-    type: "spring",
-    stiffness: 260,
-    damping: 20,
-  },
-};
-function App() {
+const Smile = styled.span`
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 190px;
+`;
+function Animation() {
   return (
     <Wrapper>
-      <Box variants={myVars} initial="start" animate="end"></Box>
+      <Box
+        transition={{ type: "spring", damping: 100 }}
+        initial={{ scale: 0 }}
+        animate={{ scale: 2, rotateZ: 360 }}
+      >
+        <Smile>😂</Smile>
+      </Box>
     </Wrapper>
   );
 }
 
-export default App;
+export default Animation;
