@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
-import { useRef, useEffect } from "react";
-import Animation from "./components/Animation";
+import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 
 const Wrapper = styled(motion.div)`
   height: 200vh;
@@ -19,7 +17,7 @@ const Box = styled(motion.div)`
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
 
-function App() {
+function Scroll() {
   const x = useMotionValue(0);
   const rotateZ = useTransform(x, [-900, 900], [-360, 360]);
   const gradient = useTransform(
@@ -40,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Scroll;
