@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import Animation from "./components/Animation";
 
 const Wrapper = styled(motion.div)`
   height: 100vh;
@@ -26,7 +25,7 @@ const boxVariants = {
   leaving: { opacity: 0, y: 500, rotateZ: 720, scale: 0 },
 };
 
-function App() {
+function AnimatePresence1() {
   const [showing, setShowing] = useState(false);
   const toggleShowing = () => {
     setShowing((current) => !current);
@@ -48,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default AnimatePresence1;
