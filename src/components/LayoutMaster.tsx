@@ -46,7 +46,7 @@ const Overlay = styled(motion.div)`
   align-items: center;
 `;
 
-function App() {
+function LayoutMaster() {
   const [id, setId] = useState<string | null>(null);
   return (
     <Wrapper>
@@ -71,4 +71,4 @@ function App() {
   );
 }
 
-export default App;
+export default LayoutMaster;
