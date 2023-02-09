@@ -24,11 +24,6 @@ const Box = styled(motion.div)`
   border-radius: 40px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
-const boxVariants = {
-  initial: { opacity: 0, scale: 0 },
-  visible: { opacity: 1, scale: 1, rotateZ: 360 },
-  leaving: { opacity: 0, y: 500, rotateZ: 720, scale: 0 },
-};
 const box = {
   entry: (back: boolean) => {
     return {
@@ -53,7 +48,7 @@ const box = {
   }),
 };
 
-function App() {
+function Slider() {
   const [visible, setVisible] = useState(1);
   const [back, setBack] = useState(false);
   const nextPlease = () => {
@@ -85,4 +80,4 @@ function App() {
   );
 }
 
-export default App;
+export default Slider;
